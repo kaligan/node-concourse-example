@@ -17,4 +17,4 @@ jobs:
   - get: project-git
     trigger: true
   - task: run-unit-tests
-    file: ci/tasks/unit-tests.yml
+    file: project-git/ci/tasks/unit-tests.yml
