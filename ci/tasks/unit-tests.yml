@@ -8,7 +8,7 @@ image_resource:
     tag: '4.5.0'
 
 inputs:
-- name: project-git
+- name: project-src
 
 run:
-  path: project-git/ci/scripts/unit-tests.sh
+  path: project-src/ci/scripts/unit-tests.sh
