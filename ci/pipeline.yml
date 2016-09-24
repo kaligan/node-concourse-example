@@ -5,13 +5,10 @@ resources:
     source:
       uri: https://github.com/kaligan/node-concourse-example.git
       branch: master
-
 jobs:
-- name: unit-tests
-  serial: true
-  public: true
-  plan:
-  - get: project-src
-    trigger: true
-  - task: run-unit-tests
-    file: project-src/ci/tasks/unit-tests.yml
+  - name: unit-tests
+    plan:
+    - get: project-src
+      trigger: true
+    - task: run-unit-tests
+      file: project-src/ci/tasks/unit-tests.yml
