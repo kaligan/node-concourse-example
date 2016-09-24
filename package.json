@@ -1,0 +1,36 @@
+{
+  "name": "node-concourse-example",
+  "version": "0.0.1",
+  "description": "Example node application using concourse to build a node application which includes koa, mysql, and redis.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "export NODE_ENV=test PORT=3001 && mocha test -u bdd -R spec --ui bdd --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaligan/node-concourse-example.git"
+  },
+  "keywords": [
+    "concourse",
+    "koa",
+    "mysql",
+    "redis"
+  ],
+  "author": "Matt Nicholson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaligan/node-concourse-example/issues"
+  },
+  "homepage": "https://github.com/kaligan/node-concourse-example#readme",
+  "dependencies": {
+    "koa": "^1.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.6.0",
+    "eslint-config-airbnb-base": "^7.1.0",
+    "eslint-plugin-import": "^1.16.0",
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0"
+  }
+}
