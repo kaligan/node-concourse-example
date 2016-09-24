@@ -1,7 +1,4 @@
-groups:
-- name: Node Concourse Example
-  jobs:
-  - unit-tests
+---
 resources:
   - name: project-src
     type: git
@@ -17,4 +14,4 @@ jobs:
   - get: project-src
     trigger: true
   - task: run-unit-tests
-    file: ci/tasks/unit-tests.yml
+    file: project-src/ci/tasks/unit-tests.yml

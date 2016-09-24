@@ -11,4 +11,4 @@ inputs:
 - name: project-src
 
 run:
-  path: ci/scripts/unit-tests.sh
+  path: project-src/ci/scripts/unit-tests.sh
