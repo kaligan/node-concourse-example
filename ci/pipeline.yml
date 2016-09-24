@@ -17,4 +17,4 @@ jobs:
   - get: project-src
     trigger: true
   - task: run-unit-tests
-    file: project-src/ci/tasks/unit-tests.yml
+    file: ci/tasks/unit-tests.yml
