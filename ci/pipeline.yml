@@ -1,0 +1,20 @@
+groups:
+- name: Node Concourse Example
+  jobs:
+  - unit-tests
+resources:
+  - name: project-git
+    type: git
+    source:
+      uri: https://github.com/kaligan/node-concourse-example.git
+      branch: master
+
+jobs:
+- name: unit-tests
+  serial: true
+  public: true
+  plan:
+  - get: project-git
+    trigger: true
+  - task: run-unit-tests
+    file: ci/tasks/unit-tests.yml

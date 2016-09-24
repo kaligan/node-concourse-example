@@ -1,0 +1,14 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: node
+    tag: "6.6.0"
+
+inputs:
+- name: project-git
+
+run:
+  path: project-git/ci/scripts/unit-tests.sh
