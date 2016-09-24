@@ -3,7 +3,7 @@ groups:
   jobs:
   - unit-tests
 resources:
-  - name: project-git
+  - name: project-src
     type: git
     source:
       uri: https://github.com/kaligan/node-concourse-example.git
@@ -14,7 +14,7 @@ jobs:
   serial: true
   public: true
   plan:
-  - get: project-git
+  - get: project-src
     trigger: true
   - task: run-unit-tests
-    file: project-git/ci/tasks/unit-tests.yml
+    file: project-src/ci/tasks/unit-tests.yml

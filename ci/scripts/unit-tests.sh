@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-set -o -e -x errexit
+set -o errexit
+set -o nounset
+set -o xtrace
 
 npm install
 npm test
